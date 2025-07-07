@@ -1,43 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chittransh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Sample Site</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Chittransh</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <h1 class="logo">MySite</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a passionate learner, coder, and explorer. I love building web tools, writing clean code, and exploring tech that empowers people.</p>
+  <section id="home" class="section">
+    <h2>Welcome to MySite</h2>
+    <button onclick="alert('Thanks for clicking!')">Click Me</button>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>Portfolio Website</strong> — This very site!</li>
-      <li><strong>Todo App</strong> — A simple JS-based task tracker.</li>
-      <li><strong>Blog CMS</strong> — A lightweight content management system.</li>
-    </ul>
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>This is a sample interactive website made using only HTML and CSS.</p>
+    <details>
+      <summary>More Info</summary>
+      <p>We build awesome sites and help you grow your brand.</p>
+    </details>
   </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email me at <a href="mailto:hello@chittransh.in">hello@chittransh.in</a></p>
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card">Web Design</div>
+      <div class="card">SEO</div>
+      <div class="card">Hosting</div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/150" alt="img1" />
+      <img src="https://via.placeholder.com/150" alt="img2" />
+      <img src="https://via.placeholder.com/150" alt="img3" />
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </section>
 
   <footer>
-    <p>© 2025 Chittransh. All rights reserved.</p>
+    <p>&copy; 2025 MySite. All rights reserved.</p>
   </footer>
 </body>
 </html>
