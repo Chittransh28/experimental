@@ -1,69 +1,192 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Sample Site</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Visual Static Webpage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0077ff;
+      --secondary: #00c2cb;
+      --accent: #ffe600;
+      --dark: #1c1c1c;
+      --light: #f9f9f9;
+      --gradient: linear-gradient(135deg, #0077ff, #00c2cb);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--light);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--gradient);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    nav {
+      background-color: var(--dark);
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 50px 20px;
+      background: white;
+    }
+
+    .card {
+      background: var(--light);
+      border: 2px solid #eaeaea;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--primary);
+    }
+
+    .features {
+      padding: 60px 20px;
+      background: #f0f4f8;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+
+    .feature-box h4 {
+      color: var(--secondary);
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <nav class="navbar">
-      <h1 class="logo">Chittransh</h1>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Welcome to Chittransh</h1>
+    <p>Experience the beauty of a static and responsive webpage</p>
   </header>
 
-  <section id="home" class="section">
-    <h2>Welcome to My Site</h2>
-    <button onclick="alert('Thanks for clicking!')">Click Me</button>
-  </section>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">Features</a>
+    <a href="#">Contact</a>
+  </nav>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>This is a sample interactive website made using only HTML and CSS.</p>
-    <details>
-      <summary>More Info</summary>
-      <p>We build awesome sites and help you grow your brand.</p>
-    </details>
-  </section>
-
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">Smile</div>
-      <div class="card">Laugh</div>
-      <div class="card">Enjoy</div>
+  <section class="cards">
+    <div class="card">
+      <img src="https://source.unsplash.com/random/300x200?landscape" alt="Landscape">
+      <h3>Stunning Landscapes</h3>
+      <p>Explore beautiful views from around the world curated for visual delight.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/300x200?technology" alt="Tech">
+      <h3>Modern Technology</h3>
+      <p>Stay ahead with the latest innovations and futuristic designs.</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/random/300x200?art" alt="Art">
+      <h3>Creative Art</h3>
+      <p>Dive into a world of colors and concepts with stunning modern art pieces.</p>
     </div>
   </section>
 
-  <section id="gallery" class="section">
-    <h2>Image Gallery</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/150" alt="img1" />
-      <img src="https://via.placeholder.com/150" alt="img2" />
-      <img src="https://via.placeholder.com/150" alt="img3" />
+  <section class="features">
+    <div class="feature-box">
+      <h4>⚡ Fast</h4>
+      <p>Loads instantly thanks to optimized static HTML & CSS.</p>
     </div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+    <div class="feature-box">
+      <h4>🌐 Responsive</h4>
+      <p>Beautiful on every device, from desktop to mobile.</p>
+    </div>
+    <div class="feature-box">
+      <h4>🎨 Stylish</h4>
+      <p>Modern design with colorful visuals and smooth layout.</p>
+    </div>
+    <div class="feature-box">
+      <h4>🧩 Modular</h4>
+      <p>Easily extendable with new sections and components.</p>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Chittransh.in. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
