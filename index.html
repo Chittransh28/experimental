@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visual Static Webpage</title>
+  <title>Chittransh</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
@@ -17,8 +16,13 @@
       --gradient: linear-gradient(135deg, #0077ff, #00c2cb);
     }
 
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body {
       font-family: 'Montserrat', sans-serif;
       background-color: var(--light);
       color: #333;
@@ -33,26 +37,28 @@
     }
 
     header h1 {
-      font-size: 3em;
+      font-size: 2.8rem;
       margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2em;
+      font-size: 1.2rem;
       margin: 0;
     }
 
     nav {
       background-color: var(--dark);
-      padding: 10px 0;
+      padding: 12px 0;
       text-align: center;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
+      display: inline-block;
     }
 
     nav a:hover {
@@ -70,21 +76,23 @@
 
     .card {
       background: var(--light);
-      border: 2px solid #eaeaea;
+      border: 1px solid #ddd;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      width: 100%;
+      max-width: 320px;
       padding: 20px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
     }
 
     .card img {
       width: 100%;
+      height: auto;
       border-radius: 10px;
       margin-bottom: 15px;
     }
@@ -92,13 +100,18 @@
     .card h3 {
       margin-top: 0;
       color: var(--primary);
+      font-size: 1.4rem;
+    }
+
+    .card p {
+      font-size: 1rem;
     }
 
     .features {
       padding: 60px 20px;
       background: #f0f4f8;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 30px;
       text-align: center;
     }
@@ -107,12 +120,17 @@
       background: white;
       padding: 30px 20px;
       border-radius: 10px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
     }
 
     .feature-box h4 {
       color: var(--secondary);
+      font-size: 1.3rem;
       margin-bottom: 10px;
+    }
+
+    .feature-box p {
+      font-size: 1rem;
     }
 
     footer {
@@ -120,15 +138,60 @@
       color: white;
       text-align: center;
       padding: 30px 20px;
+      font-size: 0.9rem;
     }
 
+    /* Responsive Design Enhancements */
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2em;
+        font-size: 2rem;
+      }
+
+      nav a {
+        margin: 0 10px;
+        font-size: 0.95rem;
+      }
+
+      .cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
 
       .card {
-        width: 90%;
+        max-width: 90%;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        padding: 40px 15px;
+      }
+
+      .feature-box {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        margin: 0 6px;
+      }
+
+      .feature-box h4 {
+        font-size: 1.1rem;
+      }
+
+      footer {
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -185,7 +248,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 Chittransh.in. All rights reserved.</p>
+    <p>&copy; 2025 Chittransh. All rights reserved.</p>
   </footer>
 
 </body>
